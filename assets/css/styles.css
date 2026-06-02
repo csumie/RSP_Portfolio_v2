@@ -951,11 +951,11 @@ select.form__field {
 	grid-template-columns: 1fr;
 	min-height: 100dvh;
 }
-@media (min-width: 64rem) {
+/* @media (min-width: 64rem) {
 	.detail__inner {
 		grid-template-columns: 1.4fr 1fr;
 	}
-}
+} */
 
 .detail__visual {
 	background: var(--c-fg);
