@@ -642,11 +642,11 @@ a {
 	display: grid;
 	grid-template-columns: 1fr;
 }
-@media (min-width: 64rem) {
+/* @media (min-width: 64rem) {
 	.contact__grid {
 		grid-template-columns: 1fr 1fr;
 	}
-}
+} */
 
 .form {
 	padding: var(--s-6) var(--pad-x);
