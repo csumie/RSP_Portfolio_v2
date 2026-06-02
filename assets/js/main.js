@@ -43,115 +43,115 @@ function unsplashUrl(id, size) {
 	return `https://images.unsplash.com/photo-${id}?w=${size}&h=${size}&fit=crop&q=70&auto=format`;
 }
 
-const TAG_POOL = [
-	"Identity",
-	"Editorial",
-	"Web",
-	"Type",
-	"Packaging",
-	"Direction",
-	"Motion",
-	"Print",
-	"System",
-	"Poster"
-];
-const CLIENTS = [
-	"Atelier Borel",
-	"Maison Klein",
-	"Kunsthalle Bern",
-	"Volume Zero",
-	"Studio Forme",
-	"La Compagnie",
-	"Index Magazine",
-	"Foundry Y",
-	"Centre Marlot",
-	"Type West",
-	"Office of Things",
-	"Press Nord"
-];
-const ROLES = [
-	"Lead Designer",
-	"Art Direction",
-	"Type & Layout",
-	"Identity Designer",
-	"Creative Direction"
-];
-const YEARS = [2026, 2025, 2025, 2024, 2024, 2023, 2023, 2022, 2022, 2021];
-const TITLES = [
-	"Counterpoint",
-	"Field Notes",
-	"Minor Index",
-	"Long Form",
-	"Sans Serif",
-	"Working Title",
-	"Volume One",
-	"Continued",
-	"Inventory",
-	"After Image",
-	"Marginal",
-	"Verso & Recto",
-	"Plain Text",
-	"Open Set",
-	"New Standard",
-	"Footnote",
-	"Annotated",
-	"Reprint"
-];
-
-const BRIEFS = [
-	"A complete identity refresh for a long-running cultural institution. The brief asked for visual continuity with the previous twenty-year mark while opening room for a more flexible system across screen-first applications.",
-	"An editorial system for a quarterly publication moving from collector-only print to a hybrid print + web release. The publication's editorial voice — opinionated, citation-heavy — needed to survive both formats without compromise.",
-	"A type-led wayfinding system for a small contemporary art space, designed to be set entirely in one variable typeface and printed in two colors on uncoated stock.",
-	"A packaging system for an independent food producer, scoped to be production-ready across nine SKUs with a single die-cut and minimal printing constraints."
-];
-
-const APPROACHES = [
-	[
-		"The system is built on a 12-column flexible grid that resolves to 4 and 6 columns at smaller sizes. Type pairs are reduced to two: a grotesque for display and a monospace for marginalia and metadata.",
-		"Color is held in OKLCH, with a single accent doing the heavy lifting across surfaces. The grid is shown, not hidden — registration marks remain visible at the edges of the page."
-	],
-	[
-		"Every component was specified twice — once for print, once for screen — with explicit fallback rules where the two diverge. Image treatments are limited to three: full-bleed, framed, and inset.",
-		"Typography uses a single variable font axis (weight) to handle the entire hierarchy. Footnotes and captions sit in monospace, intentionally distinct from the editorial body."
-	],
-	[
-		"The mark is constructed from a single geometric primitive, scaled and rotated. No outliers. No exceptions for special applications.",
-		"Print specifications were reduced to the minimum: one paper stock, two ink colors, one folding scheme. Constraints made the system durable."
-	]
-];
-
-const OUTCOMES = [
-	"The system is now in active use across 14 touchpoints. Onboarding new collaborators takes a single page of documentation. The grid holds.",
-	"Twelve issues released to date. The editorial voice has remained legible across the format change, and the production cost dropped 22%.",
-	"The mark survived its first year intact. No exceptions were granted. Three downstream agencies now build inside the system without supervision."
-];
+// const TAG_POOL = [
+// 	"Identity",
+// 	"Editorial",
+// 	"Web",
+// 	"Type",
+// 	"Packaging",
+// 	"Direction",
+// 	"Motion",
+// 	"Print",
+// 	"System",
+// 	"Poster"
+// ];
+// const CLIENTS = [
+// 	"Atelier Borel",
+// 	"Maison Klein",
+// 	"Kunsthalle Bern",
+// 	"Volume Zero",
+// 	"Studio Forme",
+// 	"La Compagnie",
+// 	"Index Magazine",
+// 	"Foundry Y",
+// 	"Centre Marlot",
+// 	"Type West",
+// 	"Office of Things",
+// 	"Press Nord"
+// ];
+// const ROLES = [
+// 	"Lead Designer",
+// 	"Art Direction",
+// 	"Type & Layout",
+// 	"Identity Designer",
+// 	"Creative Direction"
+// ];
+// const YEARS = [2026, 2025, 2025, 2024, 2024, 2023, 2023, 2022, 2022, 2021];
+// const TITLES = [
+// 	"Counterpoint",
+// 	"Field Notes",
+// 	"Minor Index",
+// 	"Long Form",
+// 	"Sans Serif",
+// 	"Working Title",
+// 	"Volume One",
+// 	"Continued",
+// 	"Inventory",
+// 	"After Image",
+// 	"Marginal",
+// 	"Verso & Recto",
+// 	"Plain Text",
+// 	"Open Set",
+// 	"New Standard",
+// 	"Footnote",
+// 	"Annotated",
+// 	"Reprint"
+// ];
+//
+// const BRIEFS = [
+// 	"A complete identity refresh for a long-running cultural institution. The brief asked for visual continuity with the previous twenty-year mark while opening room for a more flexible system across screen-first applications.",
+// 	"An editorial system for a quarterly publication moving from collector-only print to a hybrid print + web release. The publication's editorial voice — opinionated, citation-heavy — needed to survive both formats without compromise.",
+// 	"A type-led wayfinding system for a small contemporary art space, designed to be set entirely in one variable typeface and printed in two colors on uncoated stock.",
+// 	"A packaging system for an independent food producer, scoped to be production-ready across nine SKUs with a single die-cut and minimal printing constraints."
+// ];
+//
+// const APPROACHES = [
+// 	[
+// 		"The system is built on a 12-column flexible grid that resolves to 4 and 6 columns at smaller sizes. Type pairs are reduced to two: a grotesque for display and a monospace for marginalia and metadata.",
+// 		"Color is held in OKLCH, with a single accent doing the heavy lifting across surfaces. The grid is shown, not hidden — registration marks remain visible at the edges of the page."
+// 	],
+// 	[
+// 		"Every component was specified twice — once for print, once for screen — with explicit fallback rules where the two diverge. Image treatments are limited to three: full-bleed, framed, and inset.",
+// 		"Typography uses a single variable font axis (weight) to handle the entire hierarchy. Footnotes and captions sit in monospace, intentionally distinct from the editorial body."
+// 	],
+// 	[
+// 		"The mark is constructed from a single geometric primitive, scaled and rotated. No outliers. No exceptions for special applications.",
+// 		"Print specifications were reduced to the minimum: one paper stock, two ink colors, one folding scheme. Constraints made the system durable."
+// 	]
+// ];
+//
+// const OUTCOMES = [
+// 	"The system is now in active use across 14 touchpoints. Onboarding new collaborators takes a single page of documentation. The grid holds.",
+// 	"Twelve issues released to date. The editorial voice has remained legible across the format change, and the production cost dropped 22%.",
+// 	"The mark survived its first year intact. No exceptions were granted. Three downstream agencies now build inside the system without supervision."
+// ];
 
 function makeProjects() {
 	return Array.from({ length: TILE_COUNT }, (_, i) => {
-		const tags = [
-			TAG_POOL[i % TAG_POOL.length],
-			TAG_POOL[(i + 3) % TAG_POOL.length],
-			TAG_POOL[(i + 7) % TAG_POOL.length]
-		];
+		// const tags = [
+		// 	TAG_POOL[i % TAG_POOL.length],
+		// 	TAG_POOL[(i + 3) % TAG_POOL.length],
+		// 	TAG_POOL[(i + 7) % TAG_POOL.length]
+		// ];
 		return {
-			id: i,
-			num: String(i + 1).padStart(3, "0"),
-			title:
-				TITLES[i % TITLES.length] + " №" + String((i % 12) + 1).padStart(2, "0"),
-			client: CLIENTS[i % CLIENTS.length],
-			year: YEARS[i % YEARS.length],
-			role: ROLES[i % ROLES.length],
-			tags: tags,
-			image: unsplashUrl(UNSPLASH_IDS[i % UNSPLASH_IDS.length], 800),
-			brief: BRIEFS[i % BRIEFS.length],
-			approach: APPROACHES[i % APPROACHES.length],
-			outcome: OUTCOMES[i % OUTCOMES.length],
-			related: [
-				unsplashUrl(UNSPLASH_IDS[(i * 7 + 1) % UNSPLASH_IDS.length], 600),
-				unsplashUrl(UNSPLASH_IDS[(i * 7 + 3) % UNSPLASH_IDS.length], 600),
-				unsplashUrl(UNSPLASH_IDS[(i * 7 + 5) % UNSPLASH_IDS.length], 600),
-				unsplashUrl(UNSPLASH_IDS[(i * 7 + 9) % UNSPLASH_IDS.length], 600)
-			]
+			// id: i,
+			// num: String(i + 1).padStart(3, "0"),
+			// title:
+			// 	TITLES[i % TITLES.length] + " №" + String((i % 12) + 1).padStart(2, "0"),
+			// client: CLIENTS[i % CLIENTS.length],
+			// year: YEARS[i % YEARS.length],
+			// role: ROLES[i % ROLES.length],
+			// tags: tags,
+			image: unsplashUrl(UNSPLASH_IDS[i % UNSPLASH_IDS.length], 800)
+			// brief: BRIEFS[i % BRIEFS.length],
+			// approach: APPROACHES[i % APPROACHES.length],
+			// outcome: OUTCOMES[i % OUTCOMES.length],
+			// related: [
+			// 	unsplashUrl(UNSPLASH_IDS[(i * 7 + 1) % UNSPLASH_IDS.length], 600),
+			// 	unsplashUrl(UNSPLASH_IDS[(i * 7 + 3) % UNSPLASH_IDS.length], 600),
+			// 	unsplashUrl(UNSPLASH_IDS[(i * 7 + 5) % UNSPLASH_IDS.length], 600),
+			// 	unsplashUrl(UNSPLASH_IDS[(i * 7 + 9) % UNSPLASH_IDS.length], 600)
+			// ]
 		};
 	});
 }
@@ -175,19 +175,16 @@ function placeholderColor(seed) {
 
 const tiles = projects.map((p, i) => {
 	const a = document.createElement("a");
-	a.className = "tile";
-	a.href = "#project-" + p.id;
-	a.setAttribute("role", "listitem");
-	a.dataset.id = String(i);
+	// a.className = "tile";
+	// a.href = "#project-" + p.id;
+	// a.setAttribute("role", "listitem");
+	// a.dataset.id = String(i);
 	a.style.setProperty("--tile-bg", placeholderColor(i + 1));
 	a.innerHTML = `
     <img src="${p.image}" alt="${p.title}" loading="${
 		i < 12 ? "eager" : "lazy"
 	}" decoding="async">
-    <div class="tile__label">
-      <span>[${p.num}]</span>
-      <span>${p.year}</span>
-    </div>
+
   `;
 	const img = a.querySelector("img");
 	if (img.complete) {
@@ -248,43 +245,43 @@ if (reduceMotion) {
 	tiles.forEach((t) => observer.observe(t));
 }
 
-const detail = document.getElementById("detail");
+// const detail = document.getElementById("detail");
 const detailImg = document.getElementById("detail-img");
-const detailTitle = document.getElementById("detail-title");
-const detailCrumb = document.getElementById("detail-crumb");
-const detailClient = document.getElementById("detail-client");
-const detailYear = document.getElementById("detail-year");
-const detailRole = document.getElementById("detail-role");
-const detailTags = document.getElementById("detail-tags");
-const detailBrief = document.getElementById("detail-brief");
-const detailAppr1 = document.getElementById("detail-approach-1");
-const detailAppr2 = document.getElementById("detail-approach-2");
-const detailOutcome = document.getElementById("detail-outcome");
-const detailRelated = document.getElementById("detail-related");
-const detailMetaL = document.getElementById("detail-meta-l");
-const detailMetaR = document.getElementById("detail-meta-r");
+// const detailTitle = document.getElementById("detail-title");
+// const detailCrumb = document.getElementById("detail-crumb");
+// const detailClient = document.getElementById("detail-client");
+// const detailYear = document.getElementById("detail-year");
+// const detailRole = document.getElementById("detail-role");
+// const detailTags = document.getElementById("detail-tags");
+// const detailBrief = document.getElementById("detail-brief");
+// const detailAppr1 = document.getElementById("detail-approach-1");
+// const detailAppr2 = document.getElementById("detail-approach-2");
+// const detailOutcome = document.getElementById("detail-outcome");
+// const detailRelated = document.getElementById("detail-related");
+// const detailMetaL = document.getElementById("detail-meta-l");
+// const detailMetaR = document.getElementById("detail-meta-r");
 const detailClose = document.getElementById("detail-close");
 
 let activeTile = null;
 
 function fillDetail(p) {
 	detailImg.src = p.image;
-	detailImg.alt = p.title;
-	detailTitle.textContent = p.title;
-	detailCrumb.textContent = `№${p.num} — ${p.title}`;
-	detailClient.textContent = p.client;
-	detailYear.textContent = p.year;
-	detailRole.textContent = p.role;
-	detailTags.innerHTML = p.tags.map((t) => `<span>${t}</span>`).join("");
-	detailBrief.textContent = p.brief;
-	detailAppr1.textContent = p.approach[0];
-	detailAppr2.textContent = p.approach[1];
-	detailOutcome.textContent = p.outcome;
-	detailRelated.innerHTML = p.related
-		.map((src) => `<img src="${src}" alt="" loading="lazy">`)
-		.join("");
-	detailMetaL.textContent = `№${p.num} — ${p.client.toUpperCase()}`;
-	detailMetaR.textContent = `FIG. ${String(p.id + 1).padStart(2, "0")}`;
+	// detailImg.alt = p.title;
+	// detailTitle.textContent = p.title;
+	// detailCrumb.textContent = `№${p.num} — ${p.title}`;
+	// detailClient.textContent = p.client;
+	// detailYear.textContent = p.year;
+	// detailRole.textContent = p.role;
+	// detailTags.innerHTML = p.tags.map((t) => `<span>${t}</span>`).join("");
+	// detailBrief.textContent = p.brief;
+	// detailAppr1.textContent = p.approach[0];
+	// detailAppr2.textContent = p.approach[1];
+	// detailOutcome.textContent = p.outcome;
+	// detailRelated.innerHTML = p.related
+	// 	.map((src) => `<img src="${src}" alt="" loading="lazy">`)
+	// 	.join("");
+	// detailMetaL.textContent = `№${p.num} — ${p.client.toUpperCase()}`;
+	// detailMetaR.textContent = `FIG. ${String(p.id + 1).padStart(2, "0")}`;
 }
 
 function applyOpenState() {
@@ -350,6 +347,7 @@ function closeProject() {
 	}
 }
 
+	// [X] Out Modal
 detailClose.addEventListener("click", closeProject);
 document.addEventListener("keydown", (e) => {
 	if (e.key === "Escape" && detail.dataset.open === "true") closeProject();
@@ -378,9 +376,9 @@ form.addEventListener("submit", async (e) => {
 
 	try {
 		const res = await fetch(POSTBIN_URL, {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify(data)
+			method: "POST"
+			// headers: { "Content-Type": "application/json" }
+			// body: JSON.stringify(data)
 		});
 		if (!res.ok) throw new Error("HTTP " + res.status);
 		status.dataset.state = "ok";
