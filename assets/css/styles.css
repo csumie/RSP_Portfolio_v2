@@ -240,7 +240,7 @@ a {
 	background: var(--c-accent);
 	padding: 0 0.1em;
 	display: inline-block;
-	font-size: clamp(1rem, 18cqi, 13rem);
+	font-size: clamp(1rem, 10cqi, 18rem);
 }
 .hero__title sup {
 	font-size: 0.18em;
