@@ -240,6 +240,7 @@ a {
 	background: var(--c-accent);
 	padding: 0 0.1em;
 	display: inline-block;
+	font-size: 16rem;
 }
 .hero__title sup {
 	font-size: 0.18em;
